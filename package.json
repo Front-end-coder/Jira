@@ -22,7 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "json-server": "json-server __json_server_mock/db.json --watch --port 3001"
   },
   "eslintConfig": {
     "extends": [
@@ -47,12 +48,13 @@
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "husky": "^7.0.4",
+    "json-server": "^0.17.0",
     "lint-staged": "^12.0.3",
     "prettier": "2.4.1"
   },
-  "hooks": {    
-    "pre-commit": "lint-staged",    
-    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"  
+  "hooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
   },
   "lint-staged": {
     "*.{js,css,md,ts,tsx}": "prettier --write"
